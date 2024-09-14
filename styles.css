@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #6e7477;
+    --secondary-color: #112a3a;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    padding-top: 56px;
+}
+
+.navbar {
+    background-color: var(--background-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand, .nav-link {
+    color: var(--secondary-color) !important;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 100px 0;
+}
+
+h1, h2, h3 {
+    color: var(--secondary-color);
+}
+
+.section-title {
+    cursor: pointer;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title i {
+    transition: transform 0.3s ease;
+}
+
+.section-title.active i {
+    transform: rotate(180deg);
+}
+
+.section-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.section-content.active {
+    display: block;
+    opacity: 1;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-content {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.skill-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-list li {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.skill-list li:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+}
+
+.contact-list i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.1em;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: white;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .timeline-content {
+        margin-left: 0;
+    }
+}
